@@ -28,6 +28,12 @@ DEBUG
     background-color: green;
 }
 
+.debug main .container .card,
+.debug main .container .card-large {
+    height: 346px;
+    border: 1px solid black;
+}
+
 /* #endregion */
 
 /* 
@@ -69,6 +75,27 @@ COMMON
     width: calc(100% - 64px);
 }
 
+main .jumbo .container,
+main .benefits .container {
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+main .container .card {
+    flex-basis: calc((100% - 48px) / 3);
+}
+
+main .container .card-large {
+    flex-basis: calc((100% - 48px) / 3 * 2 + 24px);
+}
+
+@media screen and (max-width: 767px) {
+    main .jumbo .container .card,
+    main .jumbo .container .card-large {
+        flex-basis: 100%;
+    }
+}
+
 /* #endregion */
 
 /* 
@@ -97,6 +124,27 @@ MAIN
 */
 
 /* #region */
+
+/* Jumbotron */
+
+main .jumbo {
+    padding: 50px 0 104px;
+}
+
+main .jumbo .container .card,
+main .jumbo .container .card-large {
+    background-color: var(--boxes);
+}
+
+@media screen and (max-width: 767px) {
+    main .jumbo {
+        padding-bottom: 80px;
+    }
+}
+
+/* Strategic planning */
+
+
 
 /* #endregion */
 
