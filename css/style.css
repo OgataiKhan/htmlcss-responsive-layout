@@ -12,6 +12,26 @@ RESET
 
 /* 
 ********
+DEBUG
+********
+*/
+
+/* #region */
+
+.debug header .container {
+    background-color: orange;
+    height: 76px;
+}
+
+.debug header .container .logo,
+.debug header .container .navigation {
+    background-color: green;
+}
+
+/* #endregion */
+
+/* 
+********
 TYPOGRAPHY
 ********
 */
@@ -29,6 +49,26 @@ COMMON
 
 /* #region */
 
+:root {
+    --header: #0084fd;
+    --boxes: #b5ddff;
+    --text-main: #111111;
+    --call-to-action: #fdc15f;
+    --background-one: #ffffff;
+    --background-two: #9792e4;
+    --background-footer: #333333;
+}
+
+.flex {
+    display: flex;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    width: calc(100% - 64px);
+}
+
 /* #endregion */
 
 /* 
@@ -38,6 +78,15 @@ HEADER
 */
 
 /* #region */
+
+header {
+    background-color: var(--header);
+}
+
+header .container {
+    justify-content: space-between;
+    align-items: center;
+}
 
 /* #endregion */
 
