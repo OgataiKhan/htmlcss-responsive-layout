@@ -34,6 +34,15 @@ DEBUG
     border: 1px solid black;
 }
 
+.debug main .planning .planning-column {
+    height: 735px;
+    background-color: green;
+}
+
+.debug main .planning .app-development {
+    height: 555px;
+}
+
 /* #endregion */
 
 /* 
@@ -96,6 +105,14 @@ main .container .card-large {
     }
 }
 
+main section:nth-of-type(odd) {
+    background-color: var(--background-one);
+}
+
+main section:nth-of-type(even) {
+    background-color: var(--background-two);
+}
+
 /* #endregion */
 
 /* 
@@ -144,7 +161,39 @@ main .jumbo .container .card-large {
 
 /* Strategic planning */
 
+main .planning .container {
+    padding: 132px 132px 64px;
+    gap: 60px;
+    align-items: flex-end;
+}
 
+main .planning .planning-column {
+    width: 60%;
+}
+
+main .planning .app-development {
+    width: 40%;
+    background-color: var(--background-one);
+}
+
+@media screen and (max-width: 991px) {
+    main .planning .container {
+        padding: 132px 0 64px;
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    main .planning .planning-column,
+    main .planning .app-development {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    main .planning .container {
+        padding: 64px 0 64px;
+    }
+}
 
 /* #endregion */
 
