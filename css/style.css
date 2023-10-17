@@ -20,7 +20,7 @@ DEBUG
 
 .debug header .container {
     background-color: orange;
-    height: 76px;
+    /* height: 76px; */
 }
 
 .debug header .container .logo,
@@ -58,6 +58,14 @@ DEBUG
     height: 200px;
 }
 
+.debug main .about-us .container .about-us-text {
+    background-color: orange;
+}
+
+.debug main .about-us .container .about-us-aside {
+    background-color: green;
+}
+
 
 /* #endregion */
 
@@ -69,12 +77,15 @@ TYPOGRAPHY
 
 /* #region */
 
+body {
+    font-family: 'PT Sans', sans-serif;
+}
 
 /* #endregion */
 
 /* 
 ********
-COMMON
+VARIABLES
 ********
 */
 
@@ -90,6 +101,16 @@ COMMON
     --background-footer: #333333;
 }
 
+/* #endregion */
+
+/* 
+********
+COMMON
+********
+*/
+
+/* #region */
+
 .flex {
     display: flex;
 }
@@ -98,34 +119,6 @@ COMMON
     max-width: 1140px;
     margin: 0 auto;
     width: calc(100% - 64px);
-}
-
-main .jumbo .container,
-main .benefits .container {
-    flex-wrap: wrap;
-    gap: 24px;
-}
-
-main .container .card {
-    flex-basis: calc((100% - 48px) / 3);
-}
-
-main .container .card-large {
-    flex-basis: calc((100% - 48px) / 3 * 2 + 24px);
-}
-
-@media screen and (max-width: 991px) {
-    main .benefits .container .card {
-        flex-basis: calc((100% - 24px) / 2)
-    }
-}
-
-@media screen and (max-width: 767px) {
-    main .jumbo .container .card,
-    main .jumbo .container .card-large,
-    main .benefits .container .card {
-        flex-basis: 100%;
-    }
 }
 
 main section:nth-of-type(odd) {
@@ -152,7 +145,8 @@ header {
 
 header .container {
     justify-content: space-between;
-    align-items: center;
+    padding-top: 16px;       /* Check this! */
+    padding-bottom: 20px;    /* Check this! */
 }
 
 /* #endregion */
@@ -174,6 +168,26 @@ main .jumbo {
 main .jumbo .container .card,
 main .jumbo .container .card-large {
     background-color: var(--boxes);
+}
+
+main .jumbo .container {
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+main .jumbo .container .card {
+    flex-basis: calc((100% - 48px) / 3);
+}
+
+main .container .card-large {
+    flex-basis: calc((100% - 48px) / 3 * 2 + 24px);
+}
+
+@media screen and (max-width: 767px) {
+    main .jumbo .container .card,
+    main .jumbo .container .card-large {
+        flex-basis: 100%;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -266,6 +280,55 @@ main .benefits .container .card {
 
 main .benefits .container {
     padding-bottom: 64px;
+}
+
+main .benefits .container {
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+main .benefits .container .card {
+    flex-basis: calc((100% - 64px) / 3);
+}
+
+@media screen and (max-width: 991px) {
+    main .benefits .container .card {
+        flex-basis: calc((100% - 32px) / 2)
+    }
+}
+
+@media screen and (max-width: 767px) {
+    main .benefits .container .card {
+        flex-basis: 100%;
+    }
+}
+
+/* About us */
+
+main .about-us .container {
+    padding: 97px 50px 150px;
+    gap: 10%;
+}
+
+main .about-us .container .about-us-text {
+    width: 75%;
+}
+
+main .about-us .container .about-us-aside {
+    width: 25%;
+}
+
+@media screen and (max-width: 767px) {
+    main .about-us .container {
+        padding: 85px 0 80px;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    main .about-us .container .about-us-text,
+    main .about-us .container .about-us-aside {
+        width: 100%;
+    }
 }
 
 /* #endregion */
