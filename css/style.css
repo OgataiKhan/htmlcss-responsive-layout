@@ -4,7 +4,7 @@ RESET
 ********
  */
 
- * {
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -18,15 +18,15 @@ DEBUG
 
 /* #region */
 
-.debug header .container {
+/* .debug header .container {
     background-color: orange;
-    /* height: 76px; */
+    height: 76px;
 }
 
 .debug header .container .logo,
 .debug header .container .navigation {
     background-color: green;
-}
+} */
 
 .debug main .container .card,
 .debug main .container .card-large {
@@ -79,7 +79,19 @@ TYPOGRAPHY
 
 body {
     font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
 }
+
+header a,
+header i {
+    color: var(--background-one);
+    text-decoration: none;
+} 
+
+header i {
+    font-size: 20px;
+}
+ 
 
 /* #endregion */
 
@@ -121,6 +133,10 @@ COMMON
     width: calc(100% - 64px);
 }
 
+img {
+    display: block;
+}
+
 main section:nth-of-type(odd) {
     background-color: var(--background-one);
 }
@@ -128,6 +144,24 @@ main section:nth-of-type(odd) {
 main section:nth-of-type(even) {
     background-color: var(--background-two);
 }
+
+.btn {
+    all: unset;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn.small {
+    padding: 9px 21px;
+    border-radius: 19px;
+}
+
+.btn.white {
+    background-color: #ffffff;
+}
+
 
 /* #endregion */
 
@@ -145,9 +179,43 @@ header {
 
 header .container {
     justify-content: space-between;
-    padding-top: 16px;       /* Check this! */
-    padding-bottom: 20px;    /* Check this! */
+    padding: 16px 0;
 }
+
+header ul.navbar {
+    list-style: none;
+    gap: 33px;
+    align-items: center;
+}
+
+header .hamburger {
+    display: none;
+}
+
+@media screen and (max-width: 991px) {
+    header ul.navbar {
+        display: none;
+        position: absolute;
+        top: 10px;
+        right: 0;
+        flex-direction: column;
+        background-color: var(--header);
+        padding: 16px 5px 16px;
+    }
+
+    header .hamburger {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    header .hamburger:hover + ul,
+    header ul.navbar:hover {
+        display: flex;
+    }
+}
+
+/* header  */
 
 /* #endregion */
 
@@ -163,6 +231,7 @@ MAIN
 
 main .jumbo {
     padding: 50px 0 104px;
+    background-color: red;
 }
 
 main .jumbo .container .card,
@@ -188,9 +257,7 @@ main .container .card-large {
     main .jumbo .container .card-large {
         flex-basis: 100%;
     }
-}
 
-@media screen and (max-width: 767px) {
     main .jumbo {
         padding-bottom: 80px;
     }
