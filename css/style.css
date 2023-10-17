@@ -28,11 +28,11 @@ DEBUG
     background-color: green;
 } */
 
-.debug main .container .card,
+/* .debug main .container .card,
 .debug main .container .card-large {
     height: 346px;
     border: 1px solid black;
-}
+} */
 
 .debug main .planning .planning-column {
     height: 735px;
@@ -58,13 +58,13 @@ DEBUG
     height: 200px;
 }
 
-.debug main .about-us .container .about-us-text {
+/* .debug main .about-us .container .about-us-text {
     background-color: orange;
 }
 
 .debug main .about-us .container .about-us-aside {
     background-color: green;
-}
+} */
 
 
 /* #endregion */
@@ -91,7 +91,46 @@ header i {
 header i {
     font-size: 20px;
 }
+
+main .jumbo .card-large,
+main .jumbo .card {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+main .jumbo .card-large h4,
+main .jumbo .card h4 {
+    color: var(--header);
+    font-size: 24px;
+}
  
+main .jumbo .card-large p,
+main .jumbo .card p {
+    color: var(--card-text);
+    line-height: 30px;
+}
+
+main .jumbo .card .card-icon {
+    color: var(--header);
+    font-size: 80px;
+}
+
+main .about-us h3 {
+    color: var(--background-two);
+    font-size: 72px;
+}
+
+main .about-us .about-us-text p {
+    font-size: 20px;
+    line-height: 50px;
+}
+
+main .about-us .about-us-aside p {
+    color: var(--background-two);
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 700;
+}
 
 /* #endregion */
 
@@ -111,6 +150,7 @@ VARIABLES
     --background-one: #ffffff;
     --background-two: #9792e4;
     --background-footer: #333333;
+    --card-text: #5a6e7f;
 }
 
 /* #endregion */
@@ -149,8 +189,9 @@ main section:nth-of-type(even) {
     all: unset;
 }
 
-.btn:hover {
-    cursor: pointer;
+.btn.mini {
+    padding: 7px 16px;
+    border-radius: 21px;
 }
 
 .btn.small {
@@ -158,10 +199,29 @@ main section:nth-of-type(even) {
     border-radius: 19px;
 }
 
+.btn.medium {
+    padding: 12px 70px;
+    border-radius: 22px;
+    letter-spacing: 2px;
+}
+
 .btn.white {
     background-color: #ffffff;
 }
 
+.btn.white * {
+    color: #000000;
+}
+
+.btn.blue {
+    background-color: var(--header);
+    color: var(--background-one);
+}
+
+.btn.violet {
+    background-color: var(--background-two);
+    color: #ffffff;
+}
 
 /* #endregion */
 
@@ -237,6 +297,7 @@ main .jumbo {
 main .jumbo .container .card,
 main .jumbo .container .card-large {
     background-color: var(--boxes);
+    border-radius: 16px;
 }
 
 main .jumbo .container {
@@ -248,8 +309,59 @@ main .jumbo .container .card {
     flex-basis: calc((100% - 48px) / 3);
 }
 
-main .container .card-large {
+main .jumbo .container .card-large {
     flex-basis: calc((100% - 48px) / 3 * 2 + 24px);
+}
+
+main .jumbo .card-large .card-large-content {
+    width: 50%;
+    padding: 30px 0 60px 25px;
+}
+
+main .jumbo .card-large .card-large-content p {
+    margin: 36px 0;
+}
+
+main .jumbo .card-large .card-large-image {
+    width: 260px;
+}
+
+main .jumbo .card-large .card-large-image {
+    align-self: flex-end;
+    margin-left: 50px;
+}
+
+main .jumbo .card-large img {
+    width: 100%;
+}
+
+main .jumbo .card {
+    padding: 26px 25px;
+    text-align: center;
+}
+
+main .jumbo .card .card-icon {
+    margin-bottom: 16px;
+}
+
+main .jumbo .card p {
+    margin-top: 26px;
+}
+
+@media screen and (max-width: 991px) {
+    main .jumbo .card-large {
+        flex-direction: column;
+    }
+
+    main .jumbo .card-large .card-large-image {
+        align-self: flex-start;
+        margin-left: 25px;
+    }
+
+    main .jumbo .card-large .card-large-content {
+        width: 100%;
+        padding-right: 30px;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -373,16 +485,46 @@ main .benefits .container .card {
 /* About us */
 
 main .about-us .container {
-    padding: 97px 50px 150px;
+    padding: 97px 50px 100px;
     gap: 10%;
 }
 
-main .about-us .container .about-us-text {
+main .about-us .about-us-text {
     width: 75%;
 }
 
-main .about-us .container .about-us-aside {
-    width: 25%;
+main .about-us .about-us-text h3 {
+    margin-bottom: 20px;
+}
+
+main .about-us .about-us-text p {
+    margin-bottom: 40px;
+}
+
+main .about-us .about-us-aside {
+    width: 240px;
+}
+
+main .about-us .about-us-aside .about-us-img {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+main .about-us .about-us-aside .about-us-img img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+main .about-us .about-us-aside .about-us-img .quotation-marks {
+    color: var(--background-two);
+    font-size: 220px;
+    position: absolute;
+    top: -50px;
+    right: 0;
+}
+
+main .about-us .about-us-aside p {
+    margin-bottom: 24px;
 }
 
 @media screen and (max-width: 767px) {
@@ -395,6 +537,10 @@ main .about-us .container .about-us-aside {
     main .about-us .container .about-us-text,
     main .about-us .container .about-us-aside {
         width: 100%;
+    }
+
+    main .about-us .about-us-aside .about-us-img {
+        width: 240px;
     }
 }
 
