@@ -114,9 +114,16 @@ main .container .card-large {
     flex-basis: calc((100% - 48px) / 3 * 2 + 24px);
 }
 
+@media screen and (max-width: 991px) {
+    main .benefits .container .card {
+        flex-basis: calc((100% - 24px) / 2)
+    }
+}
+
 @media screen and (max-width: 767px) {
     main .jumbo .container .card,
-    main .jumbo .container .card-large {
+    main .jumbo .container .card-large,
+    main .benefits .container .card {
         flex-basis: 100%;
     }
 }
@@ -244,6 +251,21 @@ main .testimonials .testimonial-card .testimonial-content {
         text-align: center;   /* Check this! */
     }
 
+}
+
+/* Benefits */
+
+main .benefits h2 {
+    text-align: center;
+    padding: 70px 0 60px;
+}
+
+main .benefits .container .card {
+    background-color: var(--background-one);
+}
+
+main .benefits .container {
+    padding-bottom: 64px;
 }
 
 /* #endregion */
