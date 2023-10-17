@@ -27,6 +27,10 @@ h2 {
     font-size: 48px;
 }
 
+h6 {
+    font-size: 24px;
+}
+
 header a,
 header i {
     color: var(--background-one);
@@ -72,10 +76,6 @@ main .planning .planning-column p {
     line-height: 30px;
 }
 
-main .planning .app-development h6 {
-    font-size: 24px;
-}
-
 main .planning .app-development p {
     font-size: 18px;
     line-height: 30px;
@@ -100,6 +100,24 @@ main .testimonials .testimonial-card .testimonial-name {
     letter-spacing: 2px;
 }
 
+main .benefits h2 {
+    color: var(--background-one);
+}
+
+main .benefits .card .benefit-number,
+main .benefits .card h6 {
+    color: var(--background-two);
+}
+
+main .benefits .card .benefit-number {
+    font-size: 72px;
+    font-weight: 700;
+}
+
+main .benefits .card p {
+    line-height: 30px;
+}
+
 main .about-us h3 {
     color: var(--background-two);
     font-size: 72px;
@@ -115,6 +133,30 @@ main .about-us .about-us-aside p {
     font-size: 30px;
     line-height: 40px;
     font-weight: 700;
+}
+
+main .call-to-action {
+    color: var(--background-one);
+}
+
+main .call-to-action .get-started-text {
+    color: #cbc9f1;
+    font-size: 18px;
+}
+
+main .call-to-action .get-started-subtitle {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+main .call-to-action .get-started-free {
+    color: #fdc15f;
+    font-size: 96px;
+    font-weight: 700;
+} 
+
+main .call-to-action .copyright a {
+    color: var(--background-one);
 }
 
 /* #endregion */
@@ -189,9 +231,17 @@ main section:nth-of-type(even) {
 }
 
 .btn.medium {
-    padding: 12px 70px;
+    padding: 12px 60px;
     border-radius: 22px;
     letter-spacing: 2px;
+}
+
+.btn.big {
+    padding: 20px 70px;
+    letter-spacing: 2px;
+    border-radius: 40px;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .btn.round {
@@ -206,8 +256,12 @@ main section:nth-of-type(even) {
     background-color: #ffffff;
 }
 
-.btn.white * {
+.btn.white a {
     color: #000000;
+}
+
+.call-to-action .btn.white {
+    color: var(--background-two);
 }
 
 .btn.blue {
@@ -520,6 +574,12 @@ main .benefits h2 {
 
 main .benefits .container .card {
     background-color: var(--background-one);
+    border-radius: 16px;
+    padding: 32px;
+}
+
+main .benefits .container .card p {
+    margin: 25px 0;
 }
 
 main .benefits .container {
@@ -592,6 +652,10 @@ main .about-us .about-us-aside p {
     margin-bottom: 24px;
 }
 
+main .about-us .about-us-aside i {
+    margin-right: 8px;
+}
+
 @media screen and (max-width: 767px) {
     main .about-us .container {
         padding: 85px 0 80px;
@@ -614,6 +678,19 @@ main .about-us .about-us-aside p {
 main .call-to-action .container {
     text-align: center;
     padding: 65px 0 65px;
+}
+
+main .call-to-action .get-started-subtitle {
+    margin: 18px 0 24px;
+}
+
+main .call-to-action p {
+    margin: 28px auto 36px;
+    max-width: 464px;
+}
+
+main .call-to-action .copyright {
+    margin-top: 36px;
 }
 
 /* #endregion */
