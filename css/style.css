@@ -331,6 +331,13 @@ main .about-us .container .about-us-aside {
     }
 }
 
+/* Call to action */
+
+main .call-to-action .container {
+    text-align: center;
+    padding: 65px 0 65px;
+}
+
 /* #endregion */
 
 /* 
@@ -340,5 +347,14 @@ FOOTER
 */
 
 /* #region */
+
+footer {
+    background-color: var(--background-footer);
+}
+
+footer .container {
+    text-align: center;
+    padding: 40px 0 40px;
+}
 
 /* #endregion */
