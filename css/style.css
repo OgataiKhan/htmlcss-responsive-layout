@@ -159,6 +159,14 @@ main .call-to-action .copyright a {
     color: var(--background-one);
 }
 
+footer {
+    color: var(--background-one);
+}
+
+footer p a {
+    color: var(--background-two);
+}
+
 /* #endregion */
 
 /* 
@@ -198,6 +206,11 @@ COMMON
     max-width: 1140px;
     margin: 0 auto;
     width: calc(100% - 64px);
+}
+
+.container-small {
+    max-width: 408px;
+    margin: 0 auto;
 }
 
 img {
@@ -560,7 +573,7 @@ main .testimonials .testimonial-card .testimonial-content p {
 @media screen and (max-width: 767px) {
     main .testimonials .testimonial-card {
         flex-direction: column;
-        text-align: center;   /* Check this! */
+        text-align: center;
     }
 
 }
@@ -705,11 +718,15 @@ FOOTER
 
 footer {
     background-color: var(--background-footer);
+    padding: 40px 32px 40px;
 }
 
-footer .container {
+footer .container-small {
     text-align: center;
-    padding: 40px 0 40px;
+}
+
+footer .footer-links {
+    margin-top: 64px;
 }
 
 /* #endregion */
