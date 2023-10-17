@@ -43,6 +43,22 @@ DEBUG
     height: 555px;
 }
 
+.debug main .testimonials .testimonials-intro {
+    height: 240px;
+}
+
+.debug main .testimonials .testimonial-card {
+    height: 200px;
+}
+
+.debug main .testimonials .testimonial-image,
+.debug main .testimonials .testimonial-content {
+    background-color: aquamarine;
+    border: 1px solid black;
+    height: 200px;
+}
+
+
 /* #endregion */
 
 /* 
@@ -193,6 +209,41 @@ main .planning .app-development {
     main .planning .container {
         padding: 64px 0 64px;
     }
+}
+
+/* Testimonials */
+
+main .testimonials {
+    padding: 65px 0 79px;
+}
+
+main .testimonials .testimonials-intro {
+    padding: 0 27px 54px;
+    text-align: center;
+}
+
+main .testimonials .testimonial-card {
+    background-color: var(--background-two);
+    gap: 5%;
+    align-items: center;
+    margin-bottom: 33px;
+    padding: 32px 16px;
+}
+
+main .testimonials .testimonial-card .testimonial-image {
+    width: 235px;
+}
+
+main .testimonials .testimonial-card .testimonial-content {
+    flex-grow: 1;
+}
+
+@media screen and (max-width: 767px) {
+    main .testimonials .testimonial-card {
+        flex-direction: column;
+        text-align: center;   /* Check this! */
+    }
+
 }
 
 /* #endregion */
