@@ -47,16 +47,16 @@ DEBUG
     height: 240px;
 }
 
-.debug main .testimonials .testimonial-card {
+/* .debug main .testimonials .testimonial-card {
     height: 200px;
-}
+} */
 
-.debug main .testimonials .testimonial-image,
+/* .debug main .testimonials .testimonial-image,
 .debug main .testimonials .testimonial-content {
     background-color: aquamarine;
     border: 1px solid black;
     height: 200px;
-}
+} */
 
 /* .debug main .about-us .container .about-us-text {
     background-color: orange;
@@ -113,6 +113,20 @@ main .jumbo .card p {
 main .jumbo .card .card-icon {
     color: var(--header);
     font-size: 80px;
+}
+
+main .testimonials .testimonial-card {
+    color: var(--background-one);
+    font-size: 20px;
+}
+
+/* main .testimonials .testimonial-card .testimonial-content span {
+    font-size: 72px;
+} */
+
+main .testimonials .testimonial-card .testimonial-name {
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
 main .about-us h3 {
@@ -432,10 +446,37 @@ main .testimonials .testimonial-card {
 
 main .testimonials .testimonial-card .testimonial-image {
     width: 235px;
+    height: 235px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+}
+
+main .testimonials .testimonial-card .testimonial-image img {
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 main .testimonials .testimonial-card .testimonial-content {
     flex-grow: 1;
+}
+
+main .testimonials .testimonial-card .testimonial-content p::before,
+main .testimonials .testimonial-card .testimonial-content p::after {
+    font-size: 72px;
+    /* vertical-align: middle; */
+}
+
+main .testimonials .testimonial-card .testimonial-content p::before {
+    content: "“";
+}
+
+main .testimonials .testimonial-card .testimonial-content p::after {
+    content: "”";
 }
 
 @media screen and (max-width: 767px) {
