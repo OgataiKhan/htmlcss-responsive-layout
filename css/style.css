@@ -12,65 +12,6 @@ RESET
 
 /* 
 ********
-DEBUG
-********
-*/
-
-/* #region */
-
-/* .debug header .container {
-    background-color: orange;
-    height: 76px;
-}
-
-.debug header .container .logo,
-.debug header .container .navigation {
-    background-color: green;
-} */
-
-/* .debug main .container .card,
-.debug main .container .card-large {
-    height: 346px;
-    border: 1px solid black;
-} */
-
-.debug main .planning .planning-column {
-    height: 735px;
-    background-color: green;
-}
-
-.debug main .planning .app-development {
-    height: 555px;
-}
-
-/* .debug main .testimonials .testimonials-intro {
-    height: 240px;
-} */
-
-/* .debug main .testimonials .testimonial-card {
-    height: 200px;
-} */
-
-/* .debug main .testimonials .testimonial-image,
-.debug main .testimonials .testimonial-content {
-    background-color: aquamarine;
-    border: 1px solid black;
-    height: 200px;
-} */
-
-/* .debug main .about-us .container .about-us-text {
-    background-color: orange;
-}
-
-.debug main .about-us .container .about-us-aside {
-    background-color: green;
-} */
-
-
-/* #endregion */
-
-/* 
-********
 TYPOGRAPHY
 ********
 */
@@ -117,6 +58,27 @@ main .jumbo .card p {
 main .jumbo .card .card-icon {
     color: var(--header);
     font-size: 80px;
+}
+
+main .planning .planning-column {
+    color: var(--background-one);
+}
+
+main .planning .planning-column h5 {
+    font-size: 34px;
+}
+
+main .planning .planning-column p {
+    line-height: 30px;
+}
+
+main .planning .app-development h6 {
+    font-size: 24px;
+}
+
+main .planning .app-development p {
+    font-size: 18px;
+    line-height: 30px;
 }
 
 main .testimonials .testimonials-intro div,
@@ -212,6 +174,10 @@ main section:nth-of-type(even) {
     all: unset;
 }
 
+.btn:hover {
+    cursor: pointer;
+}
+
 .btn.mini {
     padding: 7px 16px;
     border-radius: 21px;
@@ -228,6 +194,14 @@ main section:nth-of-type(even) {
     letter-spacing: 2px;
 }
 
+.btn.round {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 20px;
+} 
+
 .btn.white {
     background-color: #ffffff;
 }
@@ -241,8 +215,12 @@ main section:nth-of-type(even) {
     color: var(--background-one);
 }
 
-.btn.violet {
+.btn.violet,
+.btn.violet2 {
     background-color: var(--background-two);
+}
+
+.btn.violet {
     color: #ffffff;
 }
 
@@ -407,12 +385,36 @@ main .planning .container {
 }
 
 main .planning .planning-column {
-    width: 60%;
+    width: 50%;
+}
+
+main .planning .planning-column img {
+    width: 100%;
+}
+
+main .planning .planning-column h5 {
+    margin: 130px 0 40px;
 }
 
 main .planning .app-development {
-    width: 40%;
+    width: 50%;
     background-color: var(--background-one);
+    text-align: center;
+    padding: 32px 40px;
+    border-radius: 50px;
+}
+
+main .planning .app-development img {
+    width: 80%;
+    margin: 0 auto;
+}
+
+main .planning .app-development h6 {
+    margin: 20px 0;
+}
+
+main .planning .app-development p {
+    margin-bottom: 36px;
 }
 
 @media screen and (max-width: 991px) {
